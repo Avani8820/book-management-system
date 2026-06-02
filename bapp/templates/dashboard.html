@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="mb-4">Dashboard</h2>
+
+<div class="row">
+
+    <div class="col-md-6">
+
+        <div class="card shadow">
+
+            <div class="card-body text-center">
+
+                <h1>{{ total_books }}</h1>
+
+                <h5>Total Books</h5>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+        <div class="card shadow">
+
+            <div class="card-body text-center">
+
+                <h1>{{ total_users }}</h1>
+
+                <h5>Total Users</h5>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="mt-4">
+
+    <a href="{% url 'book_list' %}"
+       class="btn btn-primary">
+        Manage Books
+    </a>
+
+</div>
+
+{% endblock %}
